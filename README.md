@@ -24,8 +24,7 @@ This Java-based currency conversion application allows users to convert between 
 
 ### Step 1: Clone the Repository
 ```bash
-git clone <repo-url>
-cd currency-conversion
+git clone https://github.com/DiiegoA/challenge-conversor-monedas-ONE.git
 ```
 
 ### Step 2: Compile the Java Files
@@ -120,7 +119,4 @@ INFO: User selected option 1: USD to Argentine Peso (ARS)
 INFO: User entered amount: 100
 INFO: The converted amount is: 14100.00 ARS
 ```
-
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
