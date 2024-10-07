@@ -129,10 +129,7 @@ INFO: User selected option 1: USD to Argentine Peso (ARS)
 INFO: User entered amount: 100
 INFO: The converted amount is: 14100.00 ARS
 ```
-
-<<<<<<< HEAD
 ---
 
 Happy converting!
-=======
->>>>>>> 8a135fe0afe6bc3861f480b1bdc5c3bc15a2d908
+======
