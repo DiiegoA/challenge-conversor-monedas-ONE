@@ -12,7 +12,7 @@ import java.util.Scanner;
 public class ExchangeRateApi {
 
     // Atributo LOGGER para registrar eventos en el sistema
-    private static final LoggerBase LOGGER = new LoggerBaseImpl(CurrencyConversionService.class.getName()); // Inicialización estática
+    private static final LoggerBase LOGGER = new LoggerBaseImpl(ExchangeRateApi.class.getName()); // Inicialización estática
 
     // Instancia del servicio que maneja la conversión de divisas
     private final CurrencyConversionService service;
