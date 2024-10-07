@@ -10,7 +10,7 @@ public record ConversionExchangeRate(Map<String, Double> conversion_rates) {
             return conversion_rates.get(currency);
         } else {
             // Lanza una excepción si la tasa de cambio no está disponible
-            throw new NumberFormatException("La tasa de cambio para la moneda " + currency + " no está disponible.");
+            throw new NumberFormatException(String.format("La tasa de cambio para la moneda %s no está disponible.",currency));
         }
     }
 }

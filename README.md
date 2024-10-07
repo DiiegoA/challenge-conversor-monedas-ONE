@@ -1,15 +1,17 @@
 
-# Currency Conversion Application
+# Currency Conversion API Application
 
 ## Overview
 This Java-based currency conversion application allows users to convert between USD and several Latin American currencies in real-time using data fetched from [ExchangeRate-API](https://www.exchangerate-api.com/). It supports both direct and inverse conversions with user-friendly prompts and logging functionality to track user interactions and errors.
 
 ### Features
 - Supports currency conversion between USD and:
-  - Argentine Peso (ARS)
-  - Brazilian Real (BRL)
-  - Colombian Peso (COP)
-  - Mexican Peso (MXN)
+    - Argentine Peso (ARS)
+    - Brazilian Real (BRL)
+    - Colombian Peso (COP)
+    - Mexican Peso (MXN)
+    - Bolivian Boliviano (BOB)
+    - Chilean Peso (CLP)
 - Allows both direct conversion (USD to target currency) and inverse conversion (target currency to USD).
 - Fetches real-time exchange rates from ExchangeRate-API.
 - Provides a command-line interface (CLI) with simple prompts for user input.
@@ -17,23 +19,25 @@ This Java-based currency conversion application allows users to convert between 
 - Handles exceptions and errors like invalid input types and network issues.
 
 ## Requirements
-- Java 8 or higher
+- Java 11 or higher
 - Internet connection to fetch exchange rates from the API
 
 ## How to Run
 
 ### Step 1: Clone the Repository
+Clone the repository containing the source files.
 ```bash
-git clone <repo-url>
-cd currency-conversion
+git clone https://github.com/DiiegoA/challenge-conversor-monedas-ONE.git
 ```
 
 ### Step 2: Compile the Java Files
+Compile the source files using the following command:
 ```bash
 javac -d bin src/com/aluracursos/conversion_rates/**/*.java
 ```
 
 ### Step 3: Run the Application
+Run the application using the command:
 ```bash
 java -cp bin com.aluracursos.conversion_rates.main.Main
 ```
@@ -45,7 +49,7 @@ Once you run the application, you will be presented with a menu to select the de
 
 ### **Main.java**
 - This is the entry point of the application. It creates an instance of `ExchangeRateApi` and runs the main logic by calling the `run()` method.
-  
+
 ### **ExchangeRateApi.java**
 - This class contains the core functionality of the application.
 - It handles user interaction through a menu and allows users to input an amount for conversion.
@@ -79,7 +83,7 @@ The application implements several layers of error handling:
 - **General Exception**: A fallback catch-all for any unexpected errors to prevent the program from crashing.
 
 ## API Integration
-This application integrates with [ExchangeRate-API](https://www.exchangerate-api.com/) to provide live exchange rates. Ensure that the API URL and key are correctly configured in `CurrencyConversionService.java`. 
+This application integrates with [ExchangeRate-API](https://www.exchangerate-api.com/) to provide live exchange rates. Ensure that the API URL and key are correctly configured in `CurrencyConversionService.java`.
 
 Example API URL:
 ```java
@@ -92,15 +96,20 @@ private static final String API_URL = "https://v6.exchangerate-api.com/v6/your-a
     ```
     ********************************************
     Welcome to the Currency Converter!
-    1) USD to Argentine Peso (ARS)
-    2) Argentine Peso (ARS) to USD
-    3) USD to Brazilian Real (BRL)
-    4) Brazilian Real (BRL) to USD
-    5) USD to Colombian Peso (COP)
-    6) Colombian Peso (COP) to USD
-    7) USD to Mexican Peso (MXN)
-    8) Mexican Peso (MXN) to USD
-    9) Exit
+    1) Dólar => Peso argentino
+    2) Peso argentino => Dólar
+    3) Dólar => Real brasileño
+    4) Real brasileño => Dólar
+    5) Dólar => Peso colombiano
+    6) Peso colombiano => Dólar
+    7) Dólar => Peso mexicano
+    8) Peso mexicano => Dólar
+    9) Dólar => Peso boliviano
+    10) Peso boliviano => Dólar
+    11) Dólar => Peso chileno
+    12) Peso chileno => Dólar
+    13) Ver historial de conversiones
+    14) Salir
     ********************************************
     Please choose an option:
     ```
@@ -121,6 +130,6 @@ INFO: User entered amount: 100
 INFO: The converted amount is: 14100.00 ARS
 ```
 
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+---
 
+Happy converting!
